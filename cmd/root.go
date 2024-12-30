@@ -6,6 +6,7 @@ package cmd
 
 import (
 	"os"
+	"fmt"
 
 	"github.com/spf13/cobra"
 )
@@ -36,6 +37,11 @@ func Execute() {
 	}
 }
 
+func SetVersionInfo(version, commit, date string) {
+	rootCmd.Version = fmt.Sprintf("%s (Built on %s from Git SHA %s)", version, date, commit)
+}
+
+
 func init() {
 	// Here you will define your flags and configuration settings.
 	// Cobra supports persistent flags, which, if defined here,
@@ -47,5 +53,3 @@ func init() {
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
-
-
