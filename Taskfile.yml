@@ -2,7 +2,7 @@
 version: "3"
 
 includes:
-  #docs: ./tasks/Taskfile.docs.yml
+  go: ./tasks/Taskfile.go.yml
   docs:
     taskfile: ./website
     dir: website

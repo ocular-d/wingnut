@@ -1,0 +1,12 @@
+# https://taskfile.dev
+
+version: '3'
+
+silent: true
+
+tasks:
+  clean:
+    desc: "Run 'go mod tidy'"
+    silent: true
+    cmds:
+      - go mod tidy
