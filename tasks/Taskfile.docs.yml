@@ -8,20 +8,20 @@ tasks:
   install:
     desc: "Install Docusaurus locally using Yarn"
     silent: true
-    dir: docs
+    dir: website
     cmds:
       - yarn install
 
   serve:
     desc: "Run local dev server to preview the docs"
     silent: true
-    dir: docs
+    dir: website
     cmds:
       - yarn start
 
   build:
     desc: "Build the docs website"
     silent: true
-    dir: docs
+    dir: website
     cmds:
       - yarn build
