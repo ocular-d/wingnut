@@ -12,7 +12,7 @@ tasks:
       - task -l
 
   install:
-    desc: "Install Docusaurus locally using Yarn"
+    desc: "Install Astro locally using Yarn"
     silent: true
     #dir: website
     cmds:
@@ -23,7 +23,13 @@ tasks:
     silent: true
     #dir: website
     cmds:
-      - yarn start
+      - yarn dev
+
+  update:
+    desc: "Update Astro"
+    silent: true
+    cmds:
+      - yarn dlx @astrojs/upgrade
 
   build:
     desc: "Build the docs website"
