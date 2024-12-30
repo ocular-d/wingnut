@@ -2,7 +2,10 @@
 version: "3"
 
 includes:
-  docs: ./tasks/Taskfile.docs.yml
+  #docs: ./tasks/Taskfile.docs.yml
+  docs:
+    taskfile: ./website
+    dir: website
 
 tasks:
   default:
