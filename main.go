@@ -1,10 +1,9 @@
 /*
 Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-
 */
 package main
 
-import  (
+import (
 	"github.com/ocular-d/wingnut/cmd"
 )
 
