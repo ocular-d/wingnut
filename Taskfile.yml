@@ -2,7 +2,8 @@
 version: "3"
 
 includes:
-  go: ./tasks/Taskfile.go.yml
+  code: ./tasks/Taskfile.go.yml
+  setup: ./tasks/Taskfile.setup.yml
   docs:
     taskfile: ./website
     dir: website
