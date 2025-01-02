@@ -10,3 +10,8 @@ tasks:
     silent: true
     cmds:
       - go mod tidy
+
+  fmt:
+    desc: gofumpt all go code
+    cmds:
+      - gofumpt -w -l .
