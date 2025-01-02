@@ -25,6 +25,11 @@ Use `cobra add`, the following example creates a new command with the name *foo*
 cobra-cli add repo
 ```
 
+### Version
+
+- https://www.jvt.me/posts/2023/05/27/go-cobra-version/
+- https://gitlab.com/tanna.dev/go-cobra-version-example
+
 ### Subcommands
 
 The following example adds the subcommand *bar* to the command *foo*.
@@ -33,7 +38,6 @@ The following example adds the subcommand *bar* to the command *foo*.
 cobra-cli add -p bar fooCmd
 ```
 
+
+
 ### Create CLI reference docs from the code
-
-
-

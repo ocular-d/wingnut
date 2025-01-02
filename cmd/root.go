@@ -5,6 +5,7 @@ package cmd
 
 import (
 	"os"
+	"fmt"
 
 	"github.com/spf13/cobra"
 )
@@ -32,6 +33,11 @@ func Execute() {
 		os.Exit(1)
 	}
 }
+
+func SetVersionInfo(version, commit, date string) {
+	rootCmd.Version = fmt.Sprintf("%s (Built on %s from Git SHA %s)", version, date, commit)
+}
+
 
 func init() {
 	// Here you will define your flags and configuration settings.
