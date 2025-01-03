@@ -28,24 +28,29 @@ tasks:
     deps:
       - homebrew
     cmds:
-    - brew install cobra-cli
+      - brew install cobra-cli
     status:
-    - command -v cobra-cli >> /dev/null
+      - command -v cobra-cli >> /dev/null
 
   goreleaser:
     desc: "Check if goreleaser is installed and install it if missing"
     deps:
       - homebrew
     cmds:
-    - brew install goreleaser/tap/goreleaser
+      - brew install goreleaser/tap/goreleaser
     status:
-    - command -v goreleaser >> /dev/null
+      - command -v goreleaser >> /dev/null
 
   gofumpt:
     desc: "Check if gofumpt is installed and install it if missing"
     deps:
       - homebrew
     cmds:
-    - brew install gofumpt
+      - brew install gofumpt
     status:
-    - command -v gofumpt >> /dev/null
+      - command -v gofumpt >> /dev/null
+
+  repo-list:
+    desc: List repositories
+    cmds:
+      - gh repo list
