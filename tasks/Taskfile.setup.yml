@@ -54,3 +54,8 @@ tasks:
     desc: List repositories
     cmds:
       - gh repo list
+
+  pr-create:
+    desc: Create a Pull Request through the web
+    cmds:
+      - gh pr create --web
