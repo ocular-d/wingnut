@@ -11,7 +11,7 @@ tasks:
     cmds:
       - go mod tidy
 
-  fmt:
+  format:
     desc: gofumpt all go code
     cmds:
       - gofumpt -w -l .
