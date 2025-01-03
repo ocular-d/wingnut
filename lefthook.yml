@@ -1,0 +1,8 @@
+# lefthook.yml
+
+pre-commit:
+  parallel: true
+  commands:
+    gofmt:
+      glob: "*.{go]"
+      run: gofumpt -w -l . {staged_files}
