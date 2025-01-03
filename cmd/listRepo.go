@@ -5,6 +5,9 @@ package cmd
 
 import (
 	"fmt"
+	"log"
+	"os/exec"
+	"strings"
 
 	"github.com/spf13/cobra"
 )
@@ -21,6 +24,30 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("listRepo called")
+		// Prepare the command
+		listRepoCmd := exec.Command("gh", "repo", "list")
+
+		// Run the command and capture the output
+		output, err := listRepoCmd.CombinedOutput()
+		if err != nil {
+			log.Fatalf("Error running 'gh repo list': %v", err)
+		}
+		// Convert the output into a string
+		repoList := string(output)
+		// Print the repositories
+		if len(repoList) == 0 {
+			fmt.Println("No repositories found.")
+		} else {
+			// Optionally, format the output
+			fmt.Println("Repositories:")
+			// If the output has multiple lines (one repo per line), you could do extra formatting
+			repoLines := strings.Split(repoList, "\n")
+			for _, line := range repoLines {
+				if line != "" {
+					fmt.Println("  -", line)
+				}
+			}
+		}
 	},
 }
 
